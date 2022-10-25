@@ -1,0 +1,26 @@
+.skill-group {
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.skill-group__skill-list {
+    display: flex;
+    gap: 1.6em;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3em;
+}
+.skill-group__skill-list article {
+    flex: 0 0 200px;
+}
+
+@media only screen and (min-width: 1025px) {
+    .skill-group {
+        width: 45%;
+    }
+}
