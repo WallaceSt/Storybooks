@@ -13,22 +13,23 @@ const UnorderedList = ({list}) => {
 
 const HorizontalLine = () => <hr />
 
-export const Skill = ({ title }) => {
-    const listOfSkills = ['ES6', 'React | Redux', 'Typescript', 'NodeJS']
+export const Skill = ({ title, skills }) => {
 
     return (
-        <div className="skill">
-            <Title type='h3' text={title} />
+        <article className="skill">
+            <Title type='h3' text={title.toLowerCase()} />
             <HorizontalLine />
-            <UnorderedList list={listOfSkills} />
-        </div>
+            <UnorderedList list={skills} />
+        </article>
     )
 }
 
 Skill.propTypes = {
     title: PropTypes.string.isRequired,
+    skills: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 Skill.defaultProps = {
-    title: "Skill Name"
+    title: "Skill",
+    skills: ["Skill 1", "Skill 2", "Skill 3"]
 }
